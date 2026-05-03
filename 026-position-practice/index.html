@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Прямоугольник и круг</title>
+    <style>
+        body {
+            background-color: gray
+        }
+
+        .rectangle {
+            width: 200px;
+            height: 100px;
+            background-color: blue;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .circle {
+            width: 80px;
+            height: 80px;
+            background-color: aqua;
+            border-radius: 50%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .line {
+            width: 20px;
+            height: 20px;
+            top: 50%;
+            left: 5%;
+            border-right: 5px solid #ffffff;
+            border-bottom: 5px solid #ffffff;
+            transform: translate(-50%, -50%) rotate(-45deg);
+            position: absolute;
+        }
+
+        .lineR {
+            width: 20px;
+            height: 20px;
+            top: 50%;
+            left: 95%;
+            border-left: 5px solid #ffffff;
+            border-bottom: 5px solid #ffffff;
+            transform: translate(-50%, -50%) rotate(45deg);
+            position: absolute;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="rectangle">
+        <div class="line"></div>
+        <div class="circle"></div>
+        <div class="lineR"></div>
+    </div>
+
+</body>
+
+</html>
