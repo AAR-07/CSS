@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Центрированный прямоугольник</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #8f8f8f;
+        }
+
+        .rectangle {
+            width: 200px;
+            height: 100px;
+            background-color: blue;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            /* transform: translateX(-50%); */
+            /* transform: translateY(-50%); */
+            transform: translate(-50%, -50%);
+        }
+
+        .hover-scale {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            width: 100px;
+            height: 100px;
+            background-color: rgb(255, 0, 0);
+            transition: transform 3s ease;
+            transform: translate(-50%, -50%);
+        }
+
+        .hover-scale:hover {
+            width: 120px;
+            height: 120px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="rectangle"></div>
+    <div class="hover-scale"></div>
+</body>
+
+</html>
