@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Layout</title>
+    <style>
+        body {
+            height: 98vh;
+            display: grid;
+            grid-template-columns: 100px 1fr;
+            grid-template-rows: 80px 1fr 80px;
+        }
+
+        .header {
+            display: flex;
+            /* grid-row-start: 1;
+            grid-row-end: 2;
+            grid-column-start: 1;
+            grid-column-end: -1; */
+            grid-area: 1/1/2/-1;
+            background-color: #3d3d3c;
+            color: white;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .aside {
+            display: flex;
+            background-color: #595959;
+            color: white;
+            padding: 5px;
+        }
+
+        .main {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            background-color: #f0f0f0;
+            padding: 5px;
+            gap: 10px;
+        }
+
+        .section {
+            background-color: #c7c7c7;
+            padding: 10px;
+        }
+
+        .footer {
+            /* grid-row-start: 3;
+            grid-row-end: -1;
+            grid-column-start: 1;
+            grid-column-end: -1; */
+            grid-area: 3/1/-1/-1;
+            display: flex;
+            background-color: #3d3d3c;
+            color: white;
+            justify-content: center;
+            align-items: center;
+        }
+
+        @media (max-width: 570px) {
+            .main {
+                display: grid;
+                grid-template-columns: 1fr;
+                grid-template-rows: repeat(3, 1fr);
+                background-color: #f0f0f0;
+                padding: 5px;
+                gap: 10px;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">Header</div>
+    <div class="aside">Side Panel</div>
+    <div class="main">
+        <div class="section">Content Section 1</div>
+        <div class="section">Content Section 2</div>
+        <div class="section">Content Section 3</div>
+    </div>
+    <div class="footer">Footer</div>
+</body>
+
+</html>
